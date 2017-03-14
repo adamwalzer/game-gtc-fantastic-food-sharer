@@ -187,6 +187,7 @@ skoash.start(
                 src={`${MEDIA.EFFECT}NextAppear.mp3`}
                 volume={3}
             />,
+            <skoash.Audio ref="BKG0" type="background" src={`${CMWN.MEDIA.EFFECT}titlescreen.mp3`} loop />,
             <skoash.Audio ref="BKG3" type="background" src={`${CMWN.MEDIA.EFFECT}BKG3.mp3`} loop />,
             <div className="background title" />,
             <div className="background bkg1" />,
