@@ -32,17 +32,7 @@ import FantasticFoodSharer5Screen from
 
 import QuitScreen from 'game-green-team-challenge/components/quit_screen';
 
-import ItemsToSort from 'game-green-team-challenge/components/items_to_sort';
-
-let binNames = [
-    'recycle',
-    'landfill',
-    'compost',
-    'liquids',
-    'food-share',
-];
-
-let itemsToSort = _.filter(ItemsToSort, item => _.includes(binNames, item.bin));
+import itemsToSort from 'game-green-team-challenge/components/fantastic_items_to_sort';
 
 let audioRefs = _.uniq(_.map(itemsToSort, v =>
     _.kebabCase(_.replace(v.name, /\d+/g, '')))
@@ -117,11 +107,6 @@ skoash.start(
             <skoash.SpriteCSS
                 src={`${CMWN.MEDIA.SPRITE}_compost`}
                 spriteClass="compost-item"
-            />,
-            <skoash.SpriteCSS
-                src={`${CMWN.MEDIA.SPRITE}level3robotarm`}
-                spriteClass="fantastic-claw"
-                dataTarget="fantastic-claw"
             />,
             <skoash.SpriteCSS
                 src={`${CMWN.MEDIA.SPRITE}level.3.conveyor.belt`}
